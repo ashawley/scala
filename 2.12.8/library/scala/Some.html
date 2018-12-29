@@ -1537,7 +1537,7 @@ applying <code>pf</code> to this <a href="Option.html" class="extype" name="scal
 value, <b>if</b> this option is
 nonempty <b>and</b> <code>pf</code> is defined for that value.
 Returns <code>None</code> otherwise.</p><p>This is equivalent to:</p><pre>option <span class="kw">match</span> {
-  <span class="kw">case</span> <span class="std">Some</span>(x) <span class="kw">if</span> pf.isDefinedAt(x) <span class="kw">=&gt;</span> ...
+  <span class="kw">case</span> <span class="std">Some</span>(x) <span class="kw">if</span> pf.isDefinedAt(x) <span class="kw">=&gt;</span> <span class="std">Some</span>(pf(x))
   <span class="kw">case</span> _                            <span class="kw">=&gt;</span> <span class="std">None</span>
 }</pre></div><dl class="paramcmts block"><dt class="param">pf</dt><dd class="cmt"><p>the partial function.</p></dd><dt>returns</dt><dd class="cmt"><p>the result of applying <code>pf</code> to this <a href="Option.html" class="extype" name="scala.Option">scala.Option</a>'s
  value (if possible), or <code>None</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Option.html" class="extype" name="scala.Option">Option</a></dd><dt>Annotations</dt><dd>
@@ -2560,7 +2560,7 @@ return the result of evaluating <code>default</code>.</p><p>This is equivalent t
       </span>
       
       <p class="shortcomment cmt">Returns true if the option is <code>None</code>, false otherwise.</p><div class="fullcomment"><div class="comment cmt"><p>Returns true if the option is <code>None</code>, false otherwise.</p><p>This is equivalent to:</p><pre>option <span class="kw">match</span> {
-  <span class="kw">case</span> <span class="std">Some</span>(y) <span class="kw">=&gt;</span> <span class="kw">false</span>
+  <span class="kw">case</span> <span class="std">Some</span>(_) <span class="kw">=&gt;</span> <span class="kw">false</span>
   <span class="kw">case</span> <span class="std">None</span>    <span class="kw">=&gt;</span> <span class="kw">true</span>
 }</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="scala.Some">Some</a> → <a href="Option.html" class="extype" name="scala.Option">Option</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
