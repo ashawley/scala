@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.9-20181228-233233-a6d6600 - scala.sys.process.ProcessBuilder</title>
-          <meta name="description" content="Scala Standard Library 2.12.9 - 20181228 - 233233 - a6d6600 - scala.sys.process.ProcessBuilder" />
-          <meta name="keywords" content="Scala Standard Library 2.12.9 20181228 233233 a6d6600 scala.sys.process.ProcessBuilder" />
+          <title>Scala Standard Library 2.12.9-20190101-041148-ad8788a - scala.sys.process.ProcessBuilder</title>
+          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 041148 - ad8788a - scala.sys.process.ProcessBuilder" />
+          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 041148 ad8788a scala.sys.process.ProcessBuilder" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20181228-233233-a6d6600</span></span>
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-041148-ad8788a</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -372,22 +372,12 @@ we wanted to capture it, we could run that with <code>!!</code> instead.</p><p>N
 <code>###</code>. The reason for this name is that <code>;</code> is a reserved token in Scala.</p><p>Note: the <code>lines</code> method, though deprecated, may conflict with the <code>StringLike</code>
 method of the same name.  To avoid this, one may wish to call the builders in
 <code>Process</code> instead of importing <code>scala.sys.process._</code>.  The example above would be</p><pre><span class="kw">import</span> scala.sys.process.Process
-Process(<span class="lit">"find src -name *.scala -exec grep null {} ;"</span>) #| Process(<span class="lit">"xargs test -z"</span>) #&amp;&amp; Process(<span class="lit">"echo null-free"</span>) #|| Process(<span class="lit">"echo null detected"</span>) !</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/a6d6600/src/library/scala/sys/process/ProcessBuilder.scala#L1" target="_blank">ProcessBuilder.scala</a></dd></dl><div class="toggleContainer block">
+Process(<span class="lit">"find src -name *.scala -exec grep null {} ;"</span>) #| Process(<span class="lit">"xargs test -z"</span>) #&amp;&amp; Process(<span class="lit">"echo null-free"</span>) #|| Process(<span class="lit">"echo null detected"</span>) !</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/ad8788a/src/library/scala/sys/process/ProcessBuilder.scala#L1" target="_blank">ProcessBuilder.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="ProcessBuilder$$Sink.html" class="extype" name="scala.sys.process.ProcessBuilder.Sink">Sink</a>, <a href="ProcessBuilder$$Source.html" class="extype" name="scala.sys.process.ProcessBuilder.Source">Source</a>, <a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 156.00 120.00" height="120pt" width="156pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph0"><polygon points="-4,4 -4,-116 152,-116 152,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="scala.sys.process.ProcessBuilder (this trait)" xlink:href="#inheritance-diagram"><path d="M115.333,-50C115.333,-50 34.6667,-50 34.6667,-50 30.3333,-50 26,-45.6667 26,-41.3333 26,-41.3333 26,-32.6667 26,-32.6667 26,-28.3333 30.3333,-24 34.6667,-24 34.6667,-24 115.333,-24 115.333,-24 119.667,-24 124,-28.3333 124,-32.6667 124,-32.6667 124,-41.3333 124,-41.3333 124,-45.6667 119.667,-50 115.333,-50" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-43" x="38" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.6" x="57.9883" text-anchor="start">ProcessBuilder</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="scala.sys.process.ProcessBuilder.Source" xlink:href="ProcessBuilder$$Source.html#inheritance-diagram"><path d="M59.5833,-112C59.5833,-112 8.41667,-112 8.41667,-112 4.08333,-112 -0.25,-107.667 -0.25,-103.333 -0.25,-103.333 -0.25,-94.6667 -0.25,-94.6667 -0.25,-90.3333 4.08333,-86 8.41667,-86 8.41667,-86 59.5833,-86 59.5833,-86 63.9167,-86 68.25,-90.3333 68.25,-94.6667 68.25,-94.6667 68.25,-103.333 68.25,-103.333 68.25,-107.667 63.9167,-112 59.5833,-112" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-105" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-96.6" x="31.7148" text-anchor="start">Source</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="ProcessBuilder is a subtype of Source"><path d="M46.3942,-79.8621C52.9746,-70.2323 60.8832,-58.6588 66.7154,-50.1238" stroke="#d4d4d4" fill="none"></path><polygon points="44.2235,-78.6963 42.297,-85.8581 48.2692,-81.4609 44.2235,-78.6963" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="scala.sys.process.ProcessBuilder.Sink" xlink:href="ProcessBuilder$$Sink.html#inheritance-diagram"><path d="M136.583,-112C136.583,-112 95.4167,-112 95.4167,-112 91.0833,-112 86.75,-107.667 86.75,-103.333 86.75,-103.333 86.75,-94.6667 86.75,-94.6667 86.75,-90.3333 91.0833,-86 95.4167,-86 95.4167,-86 136.583,-86 136.583,-86 140.917,-86 145.25,-90.3333 145.25,-94.6667 145.25,-94.6667 145.25,-103.333 145.25,-103.333 145.25,-107.667 140.917,-112 136.583,-112" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-105" x="99" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-96.6" x="118.607" text-anchor="start">Sink</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="ProcessBuilder is a subtype of Sink"><path d="M103.606,-79.8621C97.0254,-70.2323 89.1168,-58.6588 83.2846,-50.1238" stroke="#d4d4d4" fill="none"></path><polygon points="101.731,-81.4609 107.703,-85.8581 105.776,-78.6963 101.731,-81.4609" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">

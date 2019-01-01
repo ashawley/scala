@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.9-20181228-233233-a6d6600 - scala.Option</title>
-          <meta name="description" content="Scala Standard Library 2.12.9 - 20181228 - 233233 - a6d6600 - scala.Option" />
-          <meta name="keywords" content="Scala Standard Library 2.12.9 20181228 233233 a6d6600 scala.Option" />
+          <title>Scala Standard Library 2.12.9-20190101-041148-ad8788a - scala.Option</title>
+          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 041148 - ad8788a - scala.Option" />
+          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 041148 ad8788a scala.Option" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20181228-233233-a6d6600</span></span>
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-041148-ad8788a</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -960,7 +960,7 @@ bMaybe <span class="kw">match</span> {
 }</pre></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Option.A">A</span>]</dd><dt>Annotations</dt><dd>
                 <span class="name">@<a href="SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
               
-        </dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/a6d6600/src/library/scala/Option.scala#L1" target="_blank">Option.scala</a></dd><dt>Since</dt><dd><p>1.1</p></dd><dt>Note</dt><dd><span class="cmt"><p>Many of the methods in here are duplicative with those
+        </dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/ad8788a/src/library/scala/Option.scala#L1" target="_blank">Option.scala</a></dd><dt>Since</dt><dd><p>1.1</p></dd><dt>Note</dt><dd><span class="cmt"><p>Many of the methods in here are duplicative with those
  in the Traversable hierarchy, but they are duplicated for a reason:
  the implicit conversion tends to leave one with an Iterable in
  situations where one could have retained an Option.</p></span></dd></dl><div class="toggleContainer block">
@@ -1705,8 +1705,8 @@ Returns <code>None</code> otherwise.</p><p>This is equivalent to:</p><pre>option
       </span>
       
       <p class="shortcomment cmt">Tests whether the option contains a given value as an element.</p><div class="fullcomment"><div class="comment cmt"><p>Tests whether the option contains a given value as an element.</p><p>This is equivalent to:</p><pre>option <span class="kw">match</span> {
-  <span class="kw">case</span> <span class="std">Some</span>(elem) <span class="kw">=&gt;</span> <span class="kw">true</span>
-  <span class="kw">case</span> _          <span class="kw">=&gt;</span> <span class="kw">false</span>
+  <span class="kw">case</span> <span class="std">Some</span>(x) <span class="kw">=&gt;</span> x == elem
+  <span class="kw">case</span> <span class="std">None</span>    <span class="kw">=&gt;</span> <span class="kw">false</span>
 }</pre></div><dl class="paramcmts block"><dt class="param">elem</dt><dd class="cmt"><p>the element to test.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the option has an element that is equal (as
  determined by <code>==</code>) to <code>elem</code>, <code>false</code> otherwise.</p></dd></dl><dl class="attributes block"> <div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="cmt">// Returns true because Some instance contains string "something" which equals "something".</span>
