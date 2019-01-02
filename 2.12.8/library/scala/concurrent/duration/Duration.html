@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.9-20190101-041148-ad8788a - scala.concurrent.duration.Duration</title>
-          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 041148 - ad8788a - scala.concurrent.duration.Duration" />
-          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 041148 ad8788a scala.concurrent.duration.Duration" />
+          <title>Scala Standard Library 2.12.9-20190101-200636-f7c7953 - scala.concurrent.duration.Duration</title>
+          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 200636 - f7c7953 - scala.concurrent.duration.Duration" />
+          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 200636 f7c7953 scala.concurrent.duration.Duration" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-041148-ad8788a</span></span>
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-200636-f7c7953</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -263,7 +263,7 @@ whether a coarser unit would be able to exactly express the same duration. This 
 used as a lossless container for a (length, unit) pair if it is constructed using the corresponding methods
 and no arithmetic is performed on it; adding/subtracting durations should in that case be done with care.</p><h4> Correspondence to Double Semantics </h4><p>The semantics of arithmetic operations on Duration are two-fold:</p><ul><li>exact addition/subtraction with nanosecond resolution for finite durations, independent of the summands' magnitude</li><li>isomorphic to <code>java.lang.Double</code> when it comes to infinite or undefined values</li></ul><p>The conversion between Duration and Double is done using <a href="#toUnit(unit:scala.concurrent.duration.TimeUnit):Double" class="extmbr" name="scala.concurrent.duration.Duration#toUnit">Duration.toUnit</a> (with unit NANOSECONDS)
 and <a href="Duration$.html#fromNanos(nanos:Double):scala.concurrent.duration.Duration" class="extmbr" name="scala.concurrent.duration.Duration#fromNanos">Duration.fromNanos(Double)</a></p><h4> Ordering </h4><p>The default ordering is consistent with the ordering of Double numbers, which means that Undefined is
-considered greater than all other durations, including <a href="Duration$.html#Inf:scala.concurrent.duration.Duration.Infinite" class="extmbr" name="scala.concurrent.duration.Duration#Inf">Duration.Inf</a>.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/ad8788a/src/library/scala/concurrent/duration/Duration.scala#L1" target="_blank">Duration.scala</a></dd></dl><div class="toggleContainer block">
+considered greater than all other durations, including <a href="Duration$.html#Inf:scala.concurrent.duration.Duration.Infinite" class="extmbr" name="scala.concurrent.duration.Duration#Inf">Duration.Inf</a>.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/f7c7953/src/library/scala/concurrent/duration/Duration.scala#L1" target="_blank">Duration.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

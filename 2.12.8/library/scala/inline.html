@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.9-20190101-041148-ad8788a - scala.inline</title>
-          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 041148 - ad8788a - scala.inline" />
-          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 041148 ad8788a scala.inline" />
+          <title>Scala Standard Library 2.12.9-20190101-200636-f7c7953 - scala.inline</title>
+          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 200636 - f7c7953 - scala.inline" />
+          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 200636 f7c7953 scala.inline" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-041148-ad8788a</span></span>
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-200636-f7c7953</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -940,7 +940,7 @@ annotated method. The annotation can be used at definition site or at callsite.<
  <span class="kw">def</span> t6 = f3(<span class="num">1</span>): <span class="ano">@inline</span>     <span class="cmt">// inlined if possible</span>
  <span class="kw">def</span> t7 = f3(<span class="num">1</span>): <span class="ano">@noinline</span>   <span class="cmt">// not inlined</span>
 }</pre><p>Note: parentheses are required when annotating a callsite within a larger expression.</p><pre><span class="kw">def</span> t1 = f1(<span class="num">1</span>) + f1(<span class="num">1</span>): <span class="ano">@noinline</span>   <span class="cmt">// equivalent to (f1(1) + f1(1)): @noinline</span>
-<span class="kw">def</span> t2 = f1(<span class="num">1</span>) + (f1(<span class="num">1</span>): <span class="ano">@noinline</span>) <span class="cmt">// the second call to f1 is not inlined</span></pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/ad8788a/src/library/scala/inline.scala#L1" target="_blank">inline.scala</a></dd></dl><div class="toggleContainer block">
+<span class="kw">def</span> t2 = f1(<span class="num">1</span>) + (f1(<span class="num">1</span>): <span class="ano">@noinline</span>) <span class="cmt">// the second call to f1 is not inlined</span></pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/f7c7953/src/library/scala/inline.scala#L1" target="_blank">inline.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
