@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.9-20190101-200636-f7c7953 - scala.concurrent.OnCompleteRunnable</title>
-          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 200636 - f7c7953 - scala.concurrent.OnCompleteRunnable" />
-          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 200636 f7c7953 scala.concurrent.OnCompleteRunnable" />
+          <title>Scala Standard Library 2.12.9-20190122-122225-8402f8a - scala.concurrent.OnCompleteRunnable</title>
+          <meta name="description" content="Scala Standard Library 2.12.9 - 20190122 - 122225 - 8402f8a - scala.concurrent.OnCompleteRunnable" />
+          <meta name="keywords" content="Scala Standard Library 2.12.9 20190122 122225 8402f8a scala.concurrent.OnCompleteRunnable" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-200636-f7c7953</span></span>
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190122-122225-8402f8a</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -279,12 +279,22 @@ animalRange.onSuccess {
 wraps a callback provided to <code>Future.onComplete</code>.
 All callbacks provided to a <code>Future</code> end up going through <code>onComplete</code>, so this allows an
 <code>ExecutionContext</code> to special-case callbacks that were executed by <code>Future</code> if desired.
-</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="scala.concurrent.OnCompleteRunnable">OnCompleteRunnable</a> with <span class="extype" name="java.lang.Runnable">Runnable</span></dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/f7c7953/src/library/scala/concurrent/Future.scala#L1" target="_blank">Future.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="scala.concurrent.OnCompleteRunnable">OnCompleteRunnable</a> with <span class="extype" name="java.lang.Runnable">Runnable</span></dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/8402f8a€{FILE_PATH_EXT}#L€{FILE_LINE}" target="_blank">Future.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../Any.html" class="extype" name="scala.Any">Any</a></div>
-        </div></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 180.00 120.00" height="120pt" width="180pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph0"><polygon points="-4,4 -4,-116 176,-116 176,4 -4,4" stroke="none" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="scala.concurrent.OnCompleteRunnable (this trait)" xlink:href="#inheritance-diagram"><path d="M138.583,-50C138.583,-50 33.4167,-50 33.4167,-50 29.0833,-50 24.75,-45.6667 24.75,-41.3333 24.75,-41.3333 24.75,-32.6667 24.75,-32.6667 24.75,-28.3333 29.0833,-24 33.4167,-24 33.4167,-24 138.583,-24 138.583,-24 142.917,-24 147.25,-28.3333 147.25,-32.6667 147.25,-32.6667 147.25,-41.3333 147.25,-41.3333 147.25,-45.6667 142.917,-50 138.583,-50" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-43" x="37" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.6" x="56.8086" text-anchor="start">OnCompleteRunnable</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef" xlink:href="../AnyRef.html#inheritance-diagram"><path d="M112.333,-112C112.333,-112 59.6667,-112 59.6667,-112 55.3333,-112 51,-107.667 51,-103.333 51,-103.333 51,-94.6667 51,-94.6667 51,-90.3333 55.3333,-86 59.6667,-86 59.6667,-86 112.333,-86 112.333,-86 116.667,-86 121,-90.3333 121,-94.6667 121,-94.6667 121,-103.333 121,-103.333 121,-107.667 116.667,-112 112.333,-112" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-105" x="63" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-96.6" x="82.7715" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="OnCompleteRunnable is a subtype of AnyRef"><path d="M86,-78.7534C86,-69.3549 86,-58.3336 86,-50.1238" stroke="#d4d4d4" fill="none"></path><polygon points="83.5501,-78.8581 86,-85.8581 88.4501,-78.8581 83.5501,-78.8581" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">

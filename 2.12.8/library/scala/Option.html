@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.9-20190101-200636-f7c7953 - scala.Option</title>
-          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 200636 - f7c7953 - scala.Option" />
-          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 200636 f7c7953 scala.Option" />
+          <title>Scala Standard Library 2.12.9-20190122-122225-8402f8a - scala.Option</title>
+          <meta name="description" content="Scala Standard Library 2.12.9 - 20190122 - 122225 - 8402f8a - scala.Option" />
+          <meta name="keywords" content="Scala Standard Library 2.12.9 20190122 122225 8402f8a scala.Option" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-200636-f7c7953</span></span>
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190122-122225-8402f8a</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -957,10 +957,11 @@ bMaybe <span class="kw">match</span> {
     println(s<span class="lit">"Found $b"</span>)
   <span class="kw">case</span> <span class="std">None</span> <span class="kw">=&gt;</span>
     println(<span class="lit">"Not found"</span>)
-}</pre></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Option.A">A</span>]</dd><dt>Annotations</dt><dd>
+}</pre><p>These are useful helper functions that exist for both <a href="Some.html" class="extype" name="scala.Some">scala.Some</a> and <code>None</code>.</p><ul><li><a href="#map[B](f:A=&gt;B):Option[B]" class="extmbr" name="scala.Option#map">map</a> — Apply a function on the optional value</li><li><a href="#flatMap[B](f:A=&gt;Option[B]):Option[B]" class="extmbr" name="scala.Option#flatMap">flatMap</a> — Same as map but function must return an optional value</li><li><a href="#foreach[U](f:A=&gt;U):Unit" class="extmbr" name="scala.Option#foreach">foreach</a> — Apply a procedure on option value</li><li><a href="#fold[B](ifEmpty:=&gt;B)(f:A=&gt;B):B" class="extmbr" name="scala.Option#fold">fold</a> —  Apply function on optional value, return default if empty</li><li><a href="#collect[B](pf:PartialFunction[A,B]):Option[B]" class="extmbr" name="scala.Option#collect">collect</a> — Apply partial pattern match on optional value</li><li><a href="#isDefined:Boolean" class="extmbr" name="scala.Option#isDefined">isDefined</a> — True if not empty</li><li><a href="#isEmpty:Boolean" class="extmbr" name="scala.Option#isEmpty">isEmpty</a> — True if empty</li><li><a href="#nonEmpty:Boolean" class="extmbr" name="scala.Option#nonEmpty">nonEmpty</a> — True if not empty</li><li><a href="#orElse[B&gt;:A](alternative:=&gt;Option[B]):Option[B]" class="extmbr" name="scala.Option#orElse">orElse</a> — Return default optional value if empty</li><li><a href="#getOrElse[B&gt;:A](default:=&gt;B):B" class="extmbr" name="scala.Option#getOrElse">getOrElse</a> — Return default value if empty</li><li><a href="#get:A" class="extmbr" name="scala.Option#get">get</a> — Return value, throw exception if empty</li><li><a href="#filter(p:A=&gt;Boolean):Option[A]" class="extmbr" name="scala.Option#filter">filter</a> — Optional value satisfies predicate</li><li><a href="#filterNot(p:A=&gt;Boolean):Option[A]" class="extmbr" name="scala.Option#filterNot">filterNot</a> — Optional value doesn't satisfy predicate</li><li><a href="#exists(p:A=&gt;Boolean):Boolean" class="extmbr" name="scala.Option#exists">exists</a> — Apply predicate on optional value or false if empty</li><li><a href="#forall(p:A=&gt;Boolean):Boolean" class="extmbr" name="scala.Option#forall">forall</a> — Apply predicate on optional value or true if empty</li><li><a href="#contains[A1&gt;:A](elem:A1):Boolean" class="extmbr" name="scala.Option#contains">contains</a> — Checks if value equals optional value or false if empty</li><li><a href="#toList:List[A]" class="extmbr" name="scala.Option#toList">toList</a> — Unary list of optional value otherwise the empty list</li><li><a href="#toRight[X](left:=&gt;X):Either[X,A]" class="extmbr" name="scala.Option#toRight">toRight</a> — Sum type by making optional value &quot;Right&quot;, otherwise default value is &quot;Left&quot;</li><li><a href="#toLeft[X](right:=&gt;X):Either[A,X]" class="extmbr" name="scala.Option#toLeft">toLeft</a> — Sum type by making optional value &quot;Left&quot;, otherwise default value is &quot;Right&quot;
+</li></ul></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Option.A">A</span>]</dd><dt>Annotations</dt><dd>
                 <span class="name">@<a href="SerialVersionUID.html" class="extype" name="scala.SerialVersionUID">SerialVersionUID</a></span><span class="args">()</span>
               
-        </dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/f7c7953/src/library/scala/Option.scala#L1" target="_blank">Option.scala</a></dd><dt>Since</dt><dd><p>1.1</p></dd><dt>Note</dt><dd><span class="cmt"><p>Many of the methods in here are duplicative with those
+        </dd><dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/8402f8a€{FILE_PATH_EXT}#L€{FILE_LINE}" target="_blank">Option.scala</a></dd><dt>Since</dt><dd><p>1.1</p></dd><dt>Note</dt><dd><span class="cmt"><p>Many of the methods in here are duplicative with those
  in the Traversable hierarchy, but they are duplicated for a reason:
  the implicit conversion tends to leave one with an Iterable in
  situations where one could have retained an Option.</p></span></dd></dl><div class="toggleContainer block">

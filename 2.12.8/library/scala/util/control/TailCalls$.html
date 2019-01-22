@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>Scala Standard Library 2.12.9-20190101-200636-f7c7953 - scala.util.control.TailCalls</title>
-          <meta name="description" content="Scala Standard Library 2.12.9 - 20190101 - 200636 - f7c7953 - scala.util.control.TailCalls" />
-          <meta name="keywords" content="Scala Standard Library 2.12.9 20190101 200636 f7c7953 scala.util.control.TailCalls" />
+          <title>Scala Standard Library 2.12.9-20190122-122225-8402f8a - scala.util.control.TailCalls</title>
+          <meta name="description" content="Scala Standard Library 2.12.9 - 20190122 - 122225 - 8402f8a - scala.util.control.TailCalls" />
+          <meta name="keywords" content="Scala Standard Library 2.12.9 20190122 122225 8402f8a scala.util.control.TailCalls" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190101-200636-f7c7953</span></span>
+        <span id="doc-title">Scala Standard Library<span id="doc-version">2.12.9-20190122-122225-8402f8a</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -211,12 +211,22 @@ isEven((<span class="num">1</span> to <span class="num">100000</span>).toList).r
     y <span class="kw">&lt;-</span> tailcall(fib(n - <span class="num">2</span>))
   } <span class="kw">yield</span> (x + y)
 
-fib(<span class="num">40</span>).result</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/f7c7953/src/library/scala/util/control/TailCalls.scala#L1" target="_blank">TailCalls.scala</a></dd></dl><div class="toggleContainer block">
+fib(<span class="num">40</span>).result</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/scala/scala/tree/8402f8a€{FILE_PATH_EXT}#L€{FILE_LINE}" target="_blank">TailCalls.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="../../AnyRef.html" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="../../Any.html" class="extype" name="scala.Any">Any</a></div>
-        </div></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">
+                  Content Hierarchy
+                </span>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 264.00 96.00" height="96pt" width="264pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 92)" class="graph" id="graph0"><polygon points="-4,4 -4,-92 260,-92 260,4 -4,4" stroke="none" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1_0"><g id="a_class|graph1_0"><a xlink:title="scala.util.control.TailCalls.Cont" xlink:href="TailCalls$$Cont.html#inheritance-diagram"><path d="M71.3333,-26C71.3333,-26 8.66667,-26 8.66667,-26 4.33333,-26 0,-21.6667 0,-17.3333 0,-17.3333 0,-8.66667 0,-8.66667 0,-4.33333 4.33333,-0 8.66667,-0 8.66667,-0 71.3333,-0 71.3333,-0 75.6667,-0 80,-4.33333 80,-8.66667 80,-8.66667 80,-17.3333 80,-17.3333 80,-21.6667 75.6667,-26 71.3333,-26" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-19" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.6" x="31.6582" text-anchor="start">Cont[A, B]</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.util.control.TailCalls.Done" xlink:href="TailCalls$$Done.html#inheritance-diagram"><path d="M162.583,-26C162.583,-26 107.417,-26 107.417,-26 103.083,-26 98.75,-21.6667 98.75,-17.3333 98.75,-17.3333 98.75,-8.66667 98.75,-8.66667 98.75,-4.33333 103.083,-0 107.417,-0 107.417,-0 162.583,-0 162.583,-0 166.917,-0 171.25,-4.33333 171.25,-8.66667 171.25,-8.66667 171.25,-17.3333 171.25,-17.3333 171.25,-21.6667 166.917,-26 162.583,-26" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-19" x="111" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.6" x="130.936" text-anchor="start">Done[A]</text></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="scala.util.control.TailCalls.Call" xlink:href="TailCalls$$Call.html#inheritance-diagram"><path d="M247.583,-26C247.583,-26 198.417,-26 198.417,-26 194.083,-26 189.75,-21.6667 189.75,-17.3333 189.75,-17.3333 189.75,-8.66667 189.75,-8.66667 189.75,-4.33333 194.083,-0 198.417,-0 198.417,-0 247.583,-0 247.583,-0 251.917,-0 256.25,-4.33333 256.25,-8.66667 256.25,-8.66667 256.25,-17.3333 256.25,-17.3333 256.25,-21.6667 251.917,-26 247.583,-26" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-19" x="202" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.6" x="221.607" text-anchor="start">Call[A]</text></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="scala.util.control.TailCalls.TailRec" xlink:href="TailCalls$$TailRec.html#inheritance-diagram"><path d="M166.333,-88C166.333,-88 103.667,-88 103.667,-88 99.3333,-88 95,-83.6667 95,-79.3333 95,-79.3333 95,-70.6667 95,-70.6667 95,-66.3333 99.3333,-62 103.667,-62 103.667,-62 166.333,-62 166.333,-62 170.667,-62 175,-66.3333 175,-70.6667 175,-70.6667 175,-79.3333 175,-79.3333 175,-83.6667 170.667,-88 166.333,-88" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-81" x="107" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-72.6" x="126.883" text-anchor="start">TailRec[A]</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="Cont[A, B] is a subtype of TailRec[A]"><path d="M109.71,-58.0271C93.8547,-48.0135 73.7394,-35.3091 59.1961,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="108.549,-60.1916 115.775,-61.8581 111.165,-56.0487 108.549,-60.1916" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node1 --><g class="edge inheritance" id="graph1_3_1"><g id="a_inheritance|graph1_3_1"><a xlink:title="Done[A] is a subtype of TailRec[A]"><path d="M135,-54.7534C135,-45.3549 135,-34.3336 135,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="132.55,-54.8581 135,-61.8581 137.45,-54.8581 132.55,-54.8581" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node2 --><g class="edge inheritance" id="graph1_3_2"><g id="a_inheritance|graph1_3_2"><a xlink:title="Call[A] is a subtype of TailRec[A]"><path d="M158.818,-57.7607C173.443,-47.7889 191.866,-35.2278 205.218,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="157.212,-55.8904 152.808,-61.8581 159.972,-59.939 157.212,-55.8904" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
