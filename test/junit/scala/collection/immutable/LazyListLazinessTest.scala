@@ -584,7 +584,7 @@ class LazyListLazinessTest {
   }
 
   @Test
-  def `== properlyLazy`(): Unit = {
+  def equals_properlyLazy(): Unit = {
     genericSameElements_properlyLazy(_ == _)
   }
 
@@ -768,7 +768,7 @@ class LazyListLazinessTest {
   }
 
   @Test
-  def `#:: properlyLazy`(): Unit = {
+  def cons_properlyLazy(): Unit = {
     val factory = lazyListFactory { init =>
       def gen(index: Int): LazyList[Int] = {
         def elem(): Int = { init.evaluate(index); index }
@@ -782,7 +782,7 @@ class LazyListLazinessTest {
   }
 
   @Test
-  def `#::: properlyLazy`(): Unit = {
+  def lazyAppendedAll_properlyLazy(): Unit = {
     val factory = lazyListFactory { init =>
       def gen(index: Int): LazyList[Int] = {
         def elem(): LazyList[Int] = LazyList.fill(1) { init.evaluate(index); index }

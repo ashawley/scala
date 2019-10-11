@@ -23,7 +23,7 @@ class PositionFilterTest {
   }
 
   @Test
-  def `filters split messages`(): Unit = {
+  def filtersSplitMessages(): Unit = {
     val filter = createFilter
     val msg = "This is an important warning."
     val longMessage = s"""$msg

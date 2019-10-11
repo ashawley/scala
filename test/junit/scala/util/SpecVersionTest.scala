@@ -69,7 +69,7 @@ class SpecVersionTest {
     assertThrows[NumberFormatException](sut.isJavaAtLeast("9-ea"))  //version number, not version string
   }
 
-  @Test def `spec has minor or more`(): Unit = {
+  @Test def specHasMinorOrMore(): Unit = {
     val sut = new TestProperties("9.2.5")
     assert(sut.isJavaAtLeast(9))
     assert(sut.isJavaAtLeast("9"))
@@ -81,7 +81,7 @@ class SpecVersionTest {
     assertFalse(sut.isJavaAtLeast("10.3.1"))
   }
 
-  @Test def `compares only major minor security`(): Unit = {
+  @Test def comparesOnlyMajorMinorSecurity(): Unit = {
     val sut = new TestProperties("9.2.5.1.2.3")
     assert(sut.isJavaAtLeast(9))
     assert(sut.isJavaAtLeast("9"))
@@ -90,7 +90,7 @@ class SpecVersionTest {
     assertFalse(sut.isJavaAtLeast("9.2.6"))
   }
 
-  @Test def `futurely proofed`(): Unit = {
+  @Test def futurelyProofed(): Unit = {
     val sut = new TestProperties("10.2.5")
     assert(sut.isJavaAtLeast(9))
     assert(sut.isJavaAtLeast(10))

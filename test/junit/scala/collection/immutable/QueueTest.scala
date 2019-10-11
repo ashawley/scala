@@ -37,7 +37,8 @@ class QueueTest {
     assertEquals(0, Queue(1,2).copyToArray(target, 1, 0))
   }
 
-  @Test def `iterator works as lazy concat`(): Unit = {
+  @Test
+  def iteratorLazyConcat(): Unit = {
     val three = Queue(1, 2, 3)
     val six   = three.enqueueAll(4 to 6)
     val it    = six.iterator

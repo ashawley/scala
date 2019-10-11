@@ -30,7 +30,7 @@ class AssertUtilTest {
     assertNotReachable(o, new Holder(r)) { }
   }
 
-  @Test def `asserts on child threads are suppressed`(): Unit = {
+  @Test def assertsOnChildThreadsAreSuppressed(): Unit = {
     def kickoff(body: => Unit): Unit = {
       val t = new Thread(() => body)
       t.start()
@@ -49,7 +49,7 @@ class AssertUtilTest {
     }
   }
 
-  @Test def `waits for child threads to complete`(): Unit = {
+  @Test def waitsForChildThreadsToComplete(): Unit = {
     import java.util.concurrent.CountDownLatch
     val latch = new CountDownLatch(1)
     def kickoff(body: => Unit): Unit = {
@@ -75,7 +75,7 @@ class AssertUtilTest {
     }
   }
 
-  @Test def `result is returned`(): Unit = {
+  @Test def resultIsReturned(): Unit = {
     def kickoff(body: => Unit): Unit = new Thread(() => body).start()
     def f() = {
       kickoff {

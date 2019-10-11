@@ -107,7 +107,7 @@ class StringContextTest {
     assertEquals(expected, res)
   }
 
-  @Test def `f interpolator baseline`(): Unit = {
+  @Test def fInterpolatorBaseline(): Unit = {
 
     implicit def stringToBoolean(s: String): Boolean = java.lang.Boolean.parseBoolean(s)
     implicit def stringToChar(s: String): Char = s(0)

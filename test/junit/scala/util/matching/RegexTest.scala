@@ -26,7 +26,7 @@ class RegexTest {
     assertEquals("1", y)
   }
 
-  @Test def `t9666: use inline group names`(): Unit = {
+  @Test def t9666UseInlineGroupNames(): Unit = {
     val r = new Regex("a(?<Bee>b*)c")
     val ms = r findAllIn "stuff abbbc more abc and so on"
     assertTrue(ms.hasNext)
@@ -38,7 +38,7 @@ class RegexTest {
     assertFalse(ms.hasNext)
   }
 
-  @Test def `t9666: use explicit group names`(): Unit = {
+  @Test def t9666UseExplicitGroupNames(): Unit = {
     val r = new Regex("a(b*)c", "Bee")
     val ms = r findAllIn "stuff abbbc more abc and so on"
     assertTrue(ms.hasNext)
@@ -50,7 +50,7 @@ class RegexTest {
     assertFalse(ms.hasNext)
   }
 
-  @Test def `t9666: fall back to explicit group names`(): Unit = {
+  @Test def t9666FallBackToExplicitGroupNames(): Unit = {
     val r = new Regex("a(?<Bar>b*)c", "Bee")
     val ms = r findAllIn "stuff abbbc more abc and so on"
     assertTrue(ms.hasNext)
@@ -68,7 +68,7 @@ class RegexTest {
   type NoMatch = NoSuchElementException
   type NoData  = IllegalStateException
 
-  @Test def `t9666: throw on bad name`(): Unit = {
+  @Test def t9666ThrowOnBadName(): Unit = {
     assertThrows[NoGroup] {
       val r = new Regex("a(?<Bar>b*)c")
       val ms = r findAllIn "stuff abbbc more abc and so on"
@@ -89,7 +89,7 @@ class RegexTest {
     }
   }
 
-  @Test def `t9827 MatchIterator ergonomics`(): Unit = {
+  @Test def t9827MatchIteratorErgonomics(): Unit = {
     val r = "(ab)(cd)".r
     val s = "xxxabcdyyyabcdzzz"
     assertEquals(3, r.findAllIn(s).start)
@@ -156,7 +156,7 @@ class RegexTest {
     }
   }
 
-  @Test def `t10827 matches method`(): Unit = {
+  @Test def t10827MatchesMethod(): Unit = {
     val r = """\d+""".r
     assertTrue(r.matches("500"))
     assertFalse(r.matches("foo"))
@@ -165,7 +165,7 @@ class RegexTest {
     assertFalse(r.matches("2foo"))
   }
 
-  @Test def `t10827 matches method for unanchored Regex`(): Unit = {
+  @Test def t10827MatchesMethodForunanchoredRegex(): Unit = {
     val r = """\d+""".r.unanchored
     assertTrue(r.matches("500"))
     assertFalse(r.matches("abc"))

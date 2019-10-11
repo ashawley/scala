@@ -74,13 +74,13 @@ class StringLikeTest {
   }
 
   @Test
-  def `line split on CR`(): Unit = {
+  def testLineSplitOnCR(): Unit = {
     assertEquals(2, "abc\r\ndef".linesIterator.size)
     assertEquals(2, "abc\rdef".linesIterator.size)
   }
 
   @Test
-  def `line split on NL, FF`(): Unit = {
+  def testLineSplitOnNLFF(): Unit = {
     assertEquals(2, "abc\ndef".linesIterator.size)
     assertEquals(1, "abc\fdef".linesIterator.size)     // no more form feed splitting
     assertEquals(2, "abc\ndef\n".linesIterator.size)
@@ -93,7 +93,7 @@ class StringLikeTest {
   }
 
   @Test
-  def `strip line endings`(): Unit = {
+  def testStripLineEndings(): Unit = {
     assertEquals("abc", "abc".stripLineEnd)
     assertEquals("abc", "abc\n".stripLineEnd)
     assertEquals("abc\n", "abc\n\n".stripLineEnd)

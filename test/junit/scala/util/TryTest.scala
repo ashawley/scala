@@ -34,7 +34,7 @@ class TryTest {
   class MyException extends Exception
   val e = new Exception("this is an exception")
 
-  @Test def `catch exceptions and lift into the Try type`(): Unit = {
+  @Test def testApply(): Unit = { // catch exceptions and lift into the Try type
     assertEquals(Success(1), Try[Int](1))
     assertEquals(Failure(e), Try[Int] { throw e })
   }
@@ -55,74 +55,75 @@ class TryTest {
     assertEquals(Success(2), Failure(e) orElse Success(2))
   }
 
-  @Test def `map when there is no exception`(): Unit = {
+  @Test def testMapNoException(): Unit = {
     assertEquals(Success(2), Success(1).map(1 + _))
     assertEquals(Failure(e), Failure[Int](e).map(1 + _))
   }
 
-  @Test def `map when there is an exception`(): Unit = {
+  @Test def testMapException(): Unit = {
     assertEquals(Failure(e), Success(1).map(_ => throw e))
     val e2 = new Exception
     assertEquals(Failure(e), Failure[Int](e).map(_ => throw e2))
   }
 
-  @Test def `map when there is a fatal exception`(): Unit = {
+  @Test def testMapFatalException(): Unit = {
     val e3 = new ThreadDeath
     assertThrows[ThreadDeath] {
       Success(1) map (_ => throw e3)
     }
   }
 
-  @Test def `flatMap when there is no exception`(): Unit = {
+  @Test def testFlatMapNoException(): Unit = {
     assertEquals(Success(2), Success(1).flatMap(x => Success(1 + x)))
     assertEquals(Failure(e), Failure[Int](e).flatMap(x => Success(1 + x)))
   }
 
-  @Test def `flatMap when there is an exception`(): Unit = {
+  @Test def testFlatMapException(): Unit = {
     assertEquals(Failure(e), Success(1).flatMap[Int](_ => throw e))
 
     val e2 = new Exception
     assertEquals(Failure(e), Failure[Int](e).flatMap[Int](_ => throw e2))
   }
-  @Test def `flatMap when there is a fatal exception`(): Unit = {
+  @Test def testFlatMapFatalException(): Unit = {
     val e3 = new ThreadDeath
     assertThrows[ThreadDeath] {
       Success(1).flatMap[Int](_ => throw e3)
     }
   }
-  @Test def `flatten is a Success(Success)`(): Unit = {
+
+  @Test def testFlattenSuccessSuccess(): Unit = {
     assertEquals(Success(1), Success(Success(1)).flatten)
   }
-  @Test def `flatten is a Success(Failure)`(): Unit = {
+  @Test def testFlattenSuccessFailure(): Unit = {
     val e = new Exception
     assertEquals(Failure(e), Success(Failure(e)).flatten)
   }
-  @Test def `flatten is a Throw`(): Unit = {
+  @Test def testFlattenThrow(): Unit = {
     val e = new Exception
     assertEquals(Failure(e), Failure[Try[Int]](e).flatten)
   }
-  @Test def `for with no Failure values`(): Unit = {
+  @Test def testForNoFailure(): Unit = {
     val result = for {
       i <- Success(1)
       j <- Success(1)
     } yield (i + j)
     assertEquals(Success(2), result)
   }
-  @Test def `for with Failure values throws before`(): Unit = {
+  @Test def testForFailureSuccess(): Unit = {
     val result = for {
       i <- Failure[Int](e)
       j <- Success(1)
     } yield (i + j)
     assertEquals(Failure(e), result)
   }
-  @Test def `for with Failure values throws after`(): Unit = {
+  @Test def testForSuccessFailure(): Unit = {
     val result = for {
       i <- Success(1)
       j <- Failure[Int](e)
     } yield (i + j)
     assertEquals(Failure(e), result)
   }
-  @Test def `for with Failure values returns the FIRST Failure`(): Unit = {
+  @Test def testForFailureFailure(): Unit = { // Returns the first Failure
     val e2 = new Exception
     val result = for {
       i <- Failure[Int](e)

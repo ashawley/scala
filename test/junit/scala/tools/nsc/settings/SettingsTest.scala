@@ -224,13 +224,16 @@ class SettingsTest {
       marginallyEquals(expected, m.help)
     })
   }
-  @Test def `wildcard doesn't disable everything`(): Unit = {
+  
+  // wildcard doesn't disable everything
+  @Test def settingsOptWildcardInliner(): Unit = {
     val settings = new Settings()
     settings.processArguments("-opt:_" :: Nil, true)
     assertTrue("has the choice", settings.opt.contains(settings.optChoices.inline))
     assertTrue("is enabled", settings.optInlinerEnabled)
   }
-  @Test def `kill switch can be enabled explicitly`(): Unit = {
+  // kill switch can be enabled explicitly
+  @Test def settingsOptInlinerLevelNone(): Unit = {
     val settings = new Settings()
     settings.processArguments("-opt:inline,l:none" :: Nil, true)
     assertTrue("has the choice", settings.opt.contains(settings.optChoices.inline))

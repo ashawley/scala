@@ -13,8 +13,9 @@ import java.util.concurrent.CountDownLatch
 
 @RunWith(classOf[JUnit4])
 class FutureTest {
+  // bug/issues#10513 firstCompletedOf must not leak references
   @Test
-  def `bug/issues#10513 firstCompletedOf must not leak references`: Unit = {
+  def firstCompletedOf: Unit = {
     import ExecutionContext.Implicits._
     val unfulfilled = Promise[AnyRef]
     val quick = Promise[AnyRef]

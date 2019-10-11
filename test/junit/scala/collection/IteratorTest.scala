@@ -247,7 +247,7 @@ class IteratorTest {
     assertFalse(x.hasNext)   // was true, after advancing underlying iterator
   }
   // scala/bug#9913
-  @Test def `span leading iterator finishes at state -1`(): Unit = {
+  @Test def spanLeadingIteratorFinishesAtStateNegativeOne(): Unit = {
     val (yes, no) = Iterator(1, 2, 3).span(_ => true)
     assertFalse(no.hasNext)
     assertTrue(yes.hasNext)
@@ -584,7 +584,7 @@ class IteratorTest {
   }
 
   // scala/bug#10709
-  @Test def `scan is lazy enough`(): Unit = {
+  @Test def scanIsLazyEnough(): Unit = {
     val results = collection.mutable.ListBuffer.empty[Int]
     val it = new AbstractIterator[Int] {
       var cur = 1
@@ -629,7 +629,7 @@ class IteratorTest {
     assertTrue(executed)
   }
 
-  @Test def `flatMap is memory efficient in previous element`(): Unit = {
+  @Test def flatMapIsMemoryEfficientInPreviousElement(): Unit = {
     import java.lang.ref._
     import scala.util.chaining._
     // Array.iterator holds onto array reference; by contrast, iterating over List walks tail.

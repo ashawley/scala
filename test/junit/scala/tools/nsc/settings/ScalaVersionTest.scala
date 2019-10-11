@@ -18,7 +18,7 @@ class ScalaVersionTest {
   }
 
   // scala/bug#9167
-  @Test def `version parses with rigor`(): Unit = {
+  @Test def versionParsesWithRigor(): Unit = {
     import settings.{ SpecificScalaVersion => V }
     import ScalaVersion._
 
@@ -63,7 +63,7 @@ class ScalaVersionTest {
   }
 
   // scala/bug#9377
-  @Test def `missing version is as good as none`(): Unit = {
+  @Test def missingVersionIsAsGoodAsNone(): Unit = {
     assertEquals(NoScalaVersion, ScalaVersion(""))
   }
 }
